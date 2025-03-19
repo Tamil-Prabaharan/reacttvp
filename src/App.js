@@ -1,11 +1,283 @@
+function Tamil(){
+var arr=[11,22,33,44,55]
+return(
+  <>
+  <h1>loop map method print all elements</h1>
+  <ol type="A">
+    {arr.map((item)=><li>{item}</li>)}
+  </ol>
 
+  <h1>loop map method even and odd numbers only</h1>
+  <ol type="circle">
+    {arr.map((item)=>
+    <li>
+    {(item%2===0 && item+"even")||(item%2!==0 && item+"odd")}
+    </li>
+    )}
+  </ol>
+
+  <h1>loop map method even  only</h1>
+  <ul type="square">
+    {arr.map((item)=>
+    <>
+    {(item%2===0 && <li>{item}</li>)}
+    </>
+    )}
+  </ul>
+  </>
+)
+}
+export default Tamil
+
+ 
+/*
+function Tamil(){
+  var sobj={
+    rno:1994,
+    sname:"tamil",
+    mark:{
+      tamil:88,
+      english:98,
+      maths:88
+    }
+  }
+
+  const dis=({rno,sname,mark:{tamil,english,maths}})=>{
+    return [rno,sname,tamil,english,maths]
+  }
+
+  var [v1,v2,v3,v4,v5,v6]=dis(sobj)
+  return(
+    <>
+    
+      <h1> Nested Object Destruction</h1>
+      <h1>Roll Number:{v1}</h1>
+      <h1>Student Name:{v2}</h1>
+      <h1>Tamil mark:{v3}</h1>
+      <h1>English mark:{v4}</h1>
+      <h1>Maths mark:{v5}</h1>
+    
+    </>
+  )
+}
+export default Tamil
+
+/*function Tamil(){
+  var sobj={
+    rno:1994,
+    sname:"tamil",
+    mark:43
+  }
+
+  const dis=({rno,sname,mark})=>{
+    return [rno,sname,mark]
+  }
+
+  var [v1,v2,v3]=dis(sobj)
+  return(
+    <>
+    
+      <h1> Object Destruction</h1>
+      <h1>Roll Number:{v1}</h1>
+      <h1>Student Name:{v2}</h1>
+      <h1>Mark:{v3}</h1>
+    
+    </>
+  )
+}
+export default Tamil
+
+/*function Tamil(){
+const show=(a,b)=>
+{
+  var add = a+b;
+  var sub = a-b;
+  var mul = a*b;
+  var div = a/b;
+  return [add,sub,mul,div]
+}
+var [v1,v2,v3,v4] = show(11,22)
+return(
+  <>
+  <h1>Function Destracting</h1>
+  Addition:{v1}<br></br>
+  subtraction:{v2}<br></br>
+  multiplication:{v3}<br></br>
+  division:{v4}<br></br>
+  </>
+)
+}
+export default Tamil
+
+
+/*function Tamil(){
+  var [v1,v2,...v3] = [11,22,33,44,55,66,77,88,99,100]
+ return(
+  <>
+  <h1>Array Destracting : To get data from source</h1>
+  value 1 : {v1}
+  <br></br>
+  value 2 : {v2}
+  <br></br>
+  value 3 : {v3}
+  </>
+ )
+}
+export default Tamil
+
+/*function Tamil(){
+  const show=(a,b,c)=>{
+    if(true){
+      var k =100;
+    }
+    document.getElementById("r1").innerHTML="arrow function show"+(a+b+c+k)
+  }
+  function dis(a,b,c){
+    var m = 100;
+     document.getElementById("r2").innerHTML="normal display function "+(a+b+c+m)
+  }
+  return(
+    <>
+    <h1>arrow function with parameter and var let const variables</h1>
+    <h1>let and const cant out of the statement it is an error var is global variable</h1>
+    <button onClick={()=>dis(11,22,33)}>click me</button>
+    <button onClick={()=>show(11,22,33)}>click me</button>
+    <div id="r1"></div>
+    <div id="r2"></div>
+    </>
+  )
+  }
+  export default Tamil
+
+/*function Tamil(){
+  const show=(a,b,c)=>{
+    document.getElementById("r1").innerHTML="arrow function show"+(a+b+c)
+  }
+  function dis(a,b,c){
+     document.getElementById("r2").innerHTML="normal display function "+(a+b+c)
+  }
+  return(
+    <>
+    <h1>arrow function with parameter</h1>
+    <h1>retun contains only arrow function if parameter is passed</h1>
+    <button onClick={()=>dis(11,22,33)}>click me</button>
+    <button onClick={()=>show(11,22,33)}>click me</button>
+    <div id="r1"></div>
+    <div id="r2"></div>
+    </>
+  )
+  }
+  export default Tamil
+
+
+/*function Tamil(){
+const show=()=>{
+  document.getElementById("r1").innerHTML="arrow function show"
+}
+function dis(){
+   document.getElementById("r2").innerHTML="normal display function "
+}
+return(
+  <>
+  <h1>arrow function without parameter</h1>
+  <button onClick={dis}>click me</button>
+  <button onClick={()=>dis()}>click me</button>
+
+  <button onClick={show}>click me</button>
+  <div id="r1"></div>
+  <div id="r2"></div>
+  </>
+)
+}
+export default Tamil
+
+/*function Tamil(){
+  var stud =[{rno:1001,sname:"tamil",mark:85},
+             {rno:1002,sname:"vignesh",mark:86},
+             {rno:1003,sname:"prabhu",mark:75}
+            ]
+  return(
+    <>
+    <h1> array  contains json</h1>
+    <h1>rool number:{stud[0].rno}</h1>
+    <h1>rool number:{stud[0].sname}</h1>
+    <h1>rool number:{stud[0].mark}</h1>
+    <h1>rool number:{stud[1].rno}</h1>
+    <h1>rool number:{stud[1].sname}</h1>
+    <h1>rool number:{stud[1].mark}</h1>
+    <h1>rool number:{stud[2].rno}</h1>
+    <h1>rool number:{stud[2].sname}</h1>
+    <h1>rool number:{stud[2].mark}</h1>
+    </>
+  )
+}
+export default Tamil
+
+/*function Tamil(){
+  var stud = {
+    rno:1001,
+    sname:"tamil",
+    subjects:[77,88,75]
+  }
+  return(
+    <>
+    <h1>json with array</h1>
+    <h1>roll number:{stud.rno}</h1>
+    <h1>name of student:{stud.sname}</h1>
+    <h1>tamil mark:{stud.subjects[0]}</h1>
+    <h1>english mark:{stud.subjects[1]}</h1>
+    </>
+  )
+}
+export default Tamil
+
+/*function Tamil(){
+  var stud = {
+    rno:1001,
+    sname:"tamil",
+    subjects:{
+    mark1:88,
+    mark2:75}
+  }
+  return(
+    <>
+    <h1>nested json</h1>
+    <h1>roll number:{stud.rno}</h1>
+    <h1>name of student:{stud.sname}</h1>
+    <h1>tamil mark:{stud.subjects["mark1"]}</h1>
+    <h1>english mark:{stud.subjects["mark2"]}</h1>
+    </>
+  )
+}
+export default Tamil
+
+/*function Tamil(){
+  var stud = {
+    rno:1001,
+    sname:"tamil",
+    mark1:88,
+    mark2:75
+  }
+  return(
+    <>
+    <h1>json</h1>
+    <h1>roll number:{stud.rno}</h1>
+    <h1>name of student:{stud.sname}</h1>
+    <h1>tamil mark:{stud.mark1}</h1>
+    <h1>english mark:{stud.mark2}</h1>
+    </>
+  )
+}
+export default Tamil
+
+/*
 function Tamil(){
   return(
     <>
     <div><CurrentBill></CurrentBill></div>
     <div><Game></Game></div>
     <div><Grade></Grade></div>
-    <div><Cuttofmarks></Cuttofmarks></div>
+    <div><Cuttofmarks></Cuttofmarks></div> 
     <div><Purchaseproducts></Purchaseproducts></div>
     <h1>hi</h1>
     </>
