@@ -1,4 +1,70 @@
+
+
 function Tamil(){
+var [v1,,v3,...v2] = [11,22,33,44,55,66,77,88,99]
+return(
+  <>
+  {typeof(v1)}
+  <br></br>
+  {typeof(v2)}
+  <br></br>
+  {typeof(v3)}
+  <br></br>
+  {Array.isArray(v2) && "this is array"}
+  <br></br>
+  {v2.map(i=><><br></br>{i} </>)}
+  </>
+)
+}
+export default Tamil
+
+/*function Tamil(){
+  var arr =[11,22,33,-44,-55,-20]
+  var json ={sno:1001,name:"tamil"}
+  var boolen =true;
+  var sum =0;
+  return(
+    <>
+    <h1>data type of an array:{typeof(arr)}</h1>
+    <h1>data type of an json:{typeof(json)}</h1>
+    <h1>data type of an booolean:{typeof(boolen)}</h1>
+     <h1>data type of an s1:{typeof(sum)}</h1>
+     <h1>----------------------------</h1>
+     <h1>arr variable:{(Array.isArray(arr) && "this is array") || "this not an array"}</h1>
+     <h1>arr variable:{(Array.isArray(json) && "this is array") || "this not an json"}</h1>
+    </>
+  )
+}
+export default Tamil
+
+/*function Tamil(){
+var arr =[11,22,33,-44,-55,-20]
+var sum =0;
+var sum1 =0, sum2=0;
+var big=[0];
+return(
+  <>
+  <h1>sum of array</h1>
+  <h1 style={{display:"none"}}>{arr.map((item) => sum = sum+item)}</h1>
+  <h1>answer:{sum}</h1>
+
+  <h1>find largest number in array</h1>
+  <h1>
+  {arr.map((item) => big<item && <>{big=item}</>)}
+  </h1>
+  <h1>answer:{big}</h1>
+
+  <h1>{arr.map((item)=>item%2===0 && <>{sum1 = sum1+1}</>)}</h1>
+  <h1>even numbers count in array:{sum1}</h1>
+
+  <h1>{arr.map((item)=>item<0 && <>{sum2 = sum2+1}</>)}</h1>
+  <h1>negative numbers count in array:{sum2}</h1>
+  </>
+     )
+}
+export default Tamil
+
+/*function Tamil(){
 var arr=[11,22,33,44,55]
 return(
   <>
