@@ -1,6 +1,41 @@
 
+import React from 'react'
+import Success from './Components/Success';
+import Failure from './Components/Failure';
+import ph1 from './Images/img1.jpg';
+import ph2 from './Images/img2.jpg';
+import ph3 from './Images/img3.jpg';
+import ph4 from './Images/img4.jpg';
+import ph5 from './Images/img5.jpg';
+import { k1, k2, k3, k4, k5, k6 } from './Components/Components';
 
-function Tamil(){
+function Tamil() {
+  var user = true
+  return (
+    <>
+    <div>
+      <h1>tamil mark:{k1}</h1>
+      <h1>english mark:{k2}</h1>
+      <h1>maths mark:{k3}</h1>
+      <h2>{k4} {k5} {k6}</h2>
+
+      {user===false ? <Success /> : <Failure /> }
+      <img src={ph1} alt="wrong path"></img>
+      <img src={ph2} alt="wrong path"></img>
+      <img src={ph3} alt="wrong path"></img>
+      <img src={ph4} alt="wrong path"></img>
+      <img src={ph5} alt="wrong path"></img>
+    </div>
+    </>
+  )
+}
+
+export default Tamil
+
+
+
+
+/*function Tamil(){
 var [v1,,v3,...v2] = [11,22,33,44,55,66,77,88,99]
 return(
   <>
