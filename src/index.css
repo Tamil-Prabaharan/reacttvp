@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.myclass{
+  background-color: aqua;
+  text-align: center;
+  font-size: 50px;
+  color: blue;
+}

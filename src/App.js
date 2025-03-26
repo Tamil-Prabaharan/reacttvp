@@ -1,5 +1,56 @@
+function Tamil(props){
+return(
+    <>
+    <h1> Roll num:{props.rno}</h1>
+    <h1> name:{props.sname}</h1>
+    <h1> mark:{props.mark}</h1>
+    </>
+)
+}
+export default Tamil
 
-import React from 'react'
+
+/*import './App.css'
+function Tamil()
+{
+//1.single top level element
+const v1=<h1>welcome to header</h1>
+//2.multiple top level element
+const v2=<>one top level element <h1>to be continued</h1> <h2>hi thanks</h2> </>
+//3.expression
+var a= 10;
+var b =20;
+const v3 = <h1>total : {a+b}</h1>
+//4.elements must be closed 
+var v4 =<hr></hr>
+//5.using attributes classname insted of class
+var v5 = <h1 id="myid" className="myclass">css style</h1>
+
+var mystyle = {
+  backgroundColor:"yellow",
+  textAlign:"center",
+  border:"10px dotted green",
+  color:"red",
+  textTransform:"uppercase"
+}
+return(
+<>
+<h1 style={{backgroundColor:'yellow',color:'red'}}>react jsx - javascript and xml -allow html code in react</h1>
+single header :{v1}
+multiple header:{v2}
+{v3}
+{v4}
+{v5}
+<h1 style={mystyle}>hi welcom to internal css</h1>
+<h1 style={mystyle}>hi welcom to internal css</h1>
+<h1 style={mystyle}>hi welcom to internal css</h1>
+<h1 style={mystyle}>hi welcom to internal css</h1>
+<h6>external css</h6>
+</>
+)
+}
+export default Tamil
+/*import React from 'react'
 import Success from './Components/Success';
 import Failure from './Components/Failure';
 import ph1 from './Images/img1.jpg';
