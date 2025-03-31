@@ -1,13 +1,107 @@
-function Tamil(props){
+import React from 'react'
+
+class App extends React.Component
+{
+  //state + props
+  constructor(props)
+  {
+    super()
+    this.state = props.jsonobject
+
+    // this.state={//this state is default keyword , it posses json file data to the return 
+    //   rno:1001,
+    //   sname:"prbhu",
+    //   mark:100
+    // }
+  }
+  
+
+  change = () =>{ //button used below the return
+    this.setState({mark:150,sname:"viky"})
+  }
+  render(){ 
+    return(
+      <>
+          <h1>props using class Components</h1>
+          {this.state.rno}<br></br>
+          {this.state.sname}<br></br>
+          {this.state.mark}
+          <button onClick={this.change}>change mark and name use change function in this keyword</button>
+    
+      </>
+    )
+  }
+}
+export default App
+
+
+/*class App extends React.Component
+{
+  constructor(props)
+  {
+    super()
+
+  }
+  render(){ 
+    return(
+      <>
+          <h1>props using class Components</h1>
+          {this.props.arrlist.map((v)=><><br></br> {v.sno} {v.sname} {v.mark} </>)}
+    
+      </>
+    )
+  }
+}
+export default App
+
+
+
+// function Tamil(props){
+
+//   return(
+//     <>
+//     <ol>
+//       {props.sub.map((v)=><>{v.sno} {v.sname} {v.mark}</>)}
+//     </ol>
+//     </>
+//   )
+// }
+// export default Tamil
+
+
+
+/*function Tamil(props){
+  var tot = 0
+
+  var subjsautomatic = []
+
+  for(var v in props.sub.nest){
+    tot = tot+props.sub.nest[v]
+    subjsautomatic.push(v)
+    console.log(v)
+  }
+
 return(
     <>
-    <h1> Roll num:{props.rno}</h1>
-    <h1> name:{props.sname}</h1>
-    <h1> mark:{props.mark}</h1>
+    <h1> Roll num:{props.sub.rno}</h1>
+    <h1> name:{props.sub.sname}</h1>
+    {/* <h1> mark:{props.sub.nest.english}</h1>
+    <h1>  mark 1:{props.sub.nest["mark"]}</h1>
+  //   <h1> mark 2:{props.sub.nest["tamil"]}</h1> *}
+  //  <ol>{subjsautomatic.map((s)=><li>{s} marks : {props.sub.nest[s]}</li>)} </ol>
+  //   <h1> total :{tot}</h1>
+  //   <h1>my hobbies...</h1>
+  //   <ol>{props.sub.hobbies.map((v)=><li>{v}</li>)} </ol>
+  //   {/* 1.{props.sub.hobbies[0]}
+    <br></br>
+    2.{props.sub.hobbies[1]}
+    <br></br>
+    3.{props.sub.hobbies[2]}
+    <br></br> */ /*}
     </>
 )
 }
-export default Tamil
+export default Tamil*/
 
 
 /*import './App.css'

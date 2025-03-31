@@ -4,11 +4,31 @@ import './index.css';
 import Tamil from './App';
 // import reportWebVitals from './reportWebVitals';
 
+// var objs={
+//   rno:1002,
+//   sname:"prabhu",
+//   nest:{
+//       mark:100,
+//       tamil:100,
+//       english:98,
+//       maths:96
+//       },
+//   hobbies  :["cricket","chess","batmitton","tennis","football","sleeping"]
+// }
+
+
+// var arr =[{sno:1,sname:"tamil",mark:100},{sno:1002,sname:"prabhu",mark:200},{sno:1003,sname:"tp",mark:300}]
+var json ={//change function in constructor prameter passed from index.js
+  rno:1001,
+      sname:"prbhu",
+       mark:100
+}
+
 // ReactDOM.render(<App></App>document.getelmentbyid)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Tamil rno="1001" sname="tamil" mark="100"/>
+    <Tamil  jsonobject = {json}/>
   </React.StrictMode>
 );
 
