@@ -18,7 +18,8 @@ import Tamil from './App';
 
 
 // var arr =[{sno:1,sname:"tamil",mark:100},{sno:1002,sname:"prabhu",mark:200},{sno:1003,sname:"tp",mark:300}]
-var json ={//change function in constructor prameter passed from index.js
+var json ={
+  //change function in constructor prameter passed from index.js
   rno:1001,
       sname:"prbhu",
        mark:100

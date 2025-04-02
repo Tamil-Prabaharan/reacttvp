@@ -1,4 +1,115 @@
-import React from 'react'
+function Tamil(){
+const dis1 = (event)=>{
+
+  document.getElementById("t1").style.backgroundColor="white"
+  document.getElementById("t2").style.backgroundColor="white"
+  document.getElementById("t3").style.backgroundColor="white"
+
+  if(event.target.id==="t1")
+  document.getElementById("t1").style.backgroundColor="lightgreen"
+  
+  if(event.target.id==="t2")
+  document.getElementById("t2").style.backgroundColor="lightgreen"
+  
+  if(event.target.id==="t3")
+  document.getElementById("t3").style.backgroundColor="lightgreen"
+  
+}
+  return(
+    <>
+    <h1>onfocus Event</h1>
+    <input type="text" onFocus={(e)=>dis1(e)} id="t1"></input>
+    <input type="text" onFocus={(e)=>dis1(e)} id="t2"></input>
+    <input type="text" onFocus={(e)=>dis1(e)} id="t3"></input>
+    </>
+  )
+}
+export default Tamil
+
+
+/*function Tamil(){
+  const show=()=>{
+    if(document.getElementById("hid").type=="hidden")
+    document.getElementById("hid").type="text";
+    else
+    document.getElementById("hid").type="hidden";
+  }
+  const copyph=()=>{
+    document.getElementById("hid").value=document.getElementById("ph").value
+  }
+  return(
+    
+    <>
+    <h1>button submit hide and show Event</h1>
+    <input type="number" onChange={copyph} id="ph" placeholder="enter name"></input>
+    <input type="hidden" value="" id="hid" ></input>
+    <input type="button" onClick={show} value="show/hide" ></input>
+    </>
+  )
+}
+export default Tamil
+
+
+/*
+function Tamil()
+{
+ return(
+   <form>
+     <input type="text" placeholder="enter user name:" value="tamil"></input>
+     <br></br>
+     <input type="number" placeholder="enter no" min="100" max="200"></input>
+     <br></br>
+     <lable>Enter password:
+       <input type="password" placeholder="enter password"></input>
+     </lable>
+     <br></br>
+     <input type="radio" name="gen" checked></input>Male
+     <input type="radio" name="gen" checked></input>Female
+     <input type="radio" name="gen" checked></input>Others
+     <br></br>
+     select course:
+     <input type="checkbox"></input>c
+     <input type="checkbox"></input>c++
+     <input type="checkbox"></input>java
+     <br></br>
+     Enter Address:
+     <textarea col="20" row="7"></textarea>
+     <br></br>
+     <select>
+       <option>january</option>
+       <option>febrarury</option>
+       <option>march</option>
+     </select>
+     <br></br>
+     Enter Email:<input type="email"></input>
+
+     select DOB:
+     <input type="date"></input>
+     <br></br>
+     select time:
+     <input type="time"></input>
+     <br></br>
+     <input type="week"></input>
+     <br></br>
+     <input type="file"></input>
+     <br></br>
+     <input type="range" min="0" max="7"></input>
+     <br></br>
+     <input type="hidden" value="100" name="hid"></input>
+     <br></br>
+     <input type="reset" name="clr"></input>
+     <br></br>
+     <input type="submit"></input>
+     <br></br>
+     <input type="button" value="clickme"></input>
+     <br></br>
+     <input type="reset" value="clear"></input>
+   </form>
+ )
+}
+export default Tamil
+
+/*import React from 'react'
 
 class App extends React.Component
 {
@@ -7,15 +118,12 @@ class App extends React.Component
   {
     super()
     this.state = props.jsonobject
-
-    // this.state={//this state is default keyword , it posses json file data to the return 
+    // this.state={//this state is default keyword , it posses json file data to the return in app.js not from index.js
     //   rno:1001,
     //   sname:"prbhu",
     //   mark:100
     // }
   }
-  
-
   change = () =>{ //button used below the return
     this.setState({mark:150,sname:"viky"})
   }
@@ -72,15 +180,12 @@ export default App
 
 /*function Tamil(props){
   var tot = 0
-
   var subjsautomatic = []
-
   for(var v in props.sub.nest){
     tot = tot+props.sub.nest[v]
     subjsautomatic.push(v)
     console.log(v)
   }
-
 return(
     <>
     <h1> Roll num:{props.sub.rno}</h1>
@@ -144,6 +249,8 @@ multiple header:{v2}
 )
 }
 export default Tamil
+
+
 /*import React from 'react'
 import Success from './Components/Success';
 import Failure from './Components/Failure';
@@ -163,7 +270,6 @@ function Tamil() {
       <h1>english mark:{k2}</h1>
       <h1>maths mark:{k3}</h1>
       <h2>{k4} {k5} {k6}</h2>
-
       {user===false ? <Success /> : <Failure /> }
       <img src={ph1} alt="wrong path"></img>
       <img src={ph2} alt="wrong path"></img>
@@ -229,9 +335,7 @@ return(
   <h1>answer:{sum}</h1>
 
   <h1>find largest number in array</h1>
-  <h1>
-  {arr.map((item) => big<item && <>{big=item}</>)}
-  </h1>
+  <h1>{arr.map((item) => big<item && <>{big=item}</>)}</h1>
   <h1>answer:{big}</h1>
 
   <h1>{arr.map((item)=>item%2===0 && <>{sum1 = sum1+1}</>)}</h1>
@@ -276,33 +380,24 @@ return(
 export default Tamil
 
  
-/*
-function Tamil(){
+/*function Tamil(){
   var sobj={
     rno:1994,
     sname:"tamil",
-    mark:{
-      tamil:88,
-      english:98,
-      maths:88
-    }
+    mark:{tamil:88,english:98,maths:88}
   }
-
   const dis=({rno,sname,mark:{tamil,english,maths}})=>{
     return [rno,sname,tamil,english,maths]
   }
-
   var [v1,v2,v3,v4,v5,v6]=dis(sobj)
   return(
     <>
-    
       <h1> Nested Object Destruction</h1>
       <h1>Roll Number:{v1}</h1>
       <h1>Student Name:{v2}</h1>
       <h1>Tamil mark:{v3}</h1>
       <h1>English mark:{v4}</h1>
       <h1>Maths mark:{v5}</h1>
-    
     </>
   )
 }
@@ -314,15 +409,12 @@ export default Tamil
     sname:"tamil",
     mark:43
   }
-
   const dis=({rno,sname,mark})=>{
     return [rno,sname,mark]
   }
-
   var [v1,v2,v3]=dis(sobj)
   return(
     <>
-    
       <h1> Object Destruction</h1>
       <h1>Roll Number:{v1}</h1>
       <h1>Student Name:{v2}</h1>
@@ -433,7 +525,7 @@ return(
   <div id="r1"></div>
   <div id="r2"></div>
   </>
-)
+  )
 }
 export default Tamil
 
@@ -605,6 +697,8 @@ function Purchaseproducts(){
   )
 }
 export default Tamil
+
+
 /*function Tamil(){
  var m1= 65;
  var m2= 75;
