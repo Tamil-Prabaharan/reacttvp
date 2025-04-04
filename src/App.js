@@ -1,4 +1,90 @@
 function Tamil(){
+const dis = (event)=>{
+  //use to find the tage name currenlty working tag by your self
+  document.getElementById("res").innerHTML=event.target.tagName+" currenlty working tag by your self"
+  
+  // use to find the tage name currenlty working tag by your self and also we need 
+  // to find same tag with different type use Type in same tag like input so use this method to find input in which type like text,passetc...,
+  document.getElementById("res1").innerHTML=event.target.tagName+" currenlty working tag by your self"+
+  "Type in same tag like input so use this method "+event.target.type
+}
+return(
+  <>
+  <h1> Event .target.tagName </h1>
+  <h1> this is used to find which tag we use crrently </h1>
+  <input type="text" onChange={(e)=>dis(e)}></input><br></br>
+  <textarea onChange={(e)=>dis(e)}></textarea><br></br>
+  <select  onChange={(e)=>dis(e)}>
+    <option>sunday</option>
+    <option>monday</option>
+    <option>tuesday</option>
+    <option>thusday</option>
+    <option>friday</option>
+  </select>
+  <div id="res"></div>
+  <div id="res1"></div>
+  </>
+)
+}
+export default Tamil
+
+
+/*function Tamil(){
+const show=(event)=>{
+  event.preventDefault()//prevent automatic refresh page 
+  console.log("submit button pressed")
+}
+var unc=0,pwc=0
+const dis=(event)=>{
+if(event.target.name==="un")
+unc+=1
+if(event.target.name==="pw")
+pwc+=1
+
+document.getElementById("r1").innerHTML=unc
+document.getElementById("r2").innerHTML=pwc
+}
+return(
+  <>
+  <form onSubmit={show}>
+  <h1>button types and properties in input</h1>
+  <h1>diff b/w button in input and button </h1>
+  <h1>in submit button automatically does </h1>
+  <input type="text" onChange={(e)=>dis(e)} name="un" placeholder="Enter user name"></input><br></br>
+  <input type="password" onChange={(e)=>dis(e)} name="pw" placeholder="enter password"></input><br></br>
+  <input type="submit"></input>
+  <input type="button" value="clickme"></input>
+  <input type="reset"></input>
+  <button><b>click me</b></button>
+  <div id="r1"></div>
+  <div id="r2"></div>
+  </form>
+  </>
+)
+}
+export default Tamil
+/*function Tamil(){
+  var c=0;
+const dis1=(e)=>{
+  e.target.style.backgroundColor="red";
+  e.target.value=parseInt(e.target.value)+1;
+}
+const dis2=(e)=>{
+  e.target.style.backgroundColor="green";
+}
+return(
+  <>
+  <h1>onBlur Event</h1>
+  <h1>parseInt Event, declear default value 0 for c in dis1 to change value in inpue and value in return</h1>
+  <input type="text" value={c} onBlur={(e)=>dis1(e)} onFocus={(e)=>dis2(e)}></input>
+  <input type="text" value={c} onBlur={(e)=>dis1(e)} onFocus={(e)=>dis2(e)}></input>
+  <input type="text" value={c} onBlur={(e)=>dis1(e)} onFocus={(e)=>dis2(e)}></input>
+  </>
+)
+}
+export default Tamil
+
+/*function Tamil(){
 const dis1 = (event)=>{
 
   document.getElementById("t1").style.backgroundColor="white"
@@ -18,6 +104,7 @@ const dis1 = (event)=>{
   return(
     <>
     <h1>onfocus Event</h1>
+    
     <input type="text" onFocus={(e)=>dis1(e)} id="t1"></input>
     <input type="text" onFocus={(e)=>dis1(e)} id="t2"></input>
     <input type="text" onFocus={(e)=>dis1(e)} id="t3"></input>
