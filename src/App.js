@@ -1,4 +1,112 @@
-function Tamil(){
+import React from 'react'
+import { useState } from 'react'
+
+const App = () => {
+  const [gender,setGender]=useState("")
+
+  const dis=(e)=>{
+    if(e.target.value==="male"){
+      e.target.checked=true
+      setGender("male")
+    }
+
+    if(e.target.value==="Female"){
+      e.target.checked=true
+      setGender("Female")
+    }
+
+    if(e.target.value==="others"){
+      e.target.checked=true
+      setGender("others")
+    }
+
+  }
+
+  return (
+    <div>
+      <>
+      <input type="radio" onChange={(e)=>dis(e)} name="gen" value="male"/>male<br></br>
+      <input type="radio" onChange={(e)=>dis(e)} name="gen" value="Female"/>Female<br></br>
+      <input type="radio" onChange={(e)=>dis(e)} name="gen" value="others"/>others<br></br>
+      selected gender :{gender}
+      </>
+    </div>
+  )
+}
+
+export default App
+
+
+/*import React from 'react'
+import { useState } from 'react'
+const App = () => {
+  const [rno,setrno]=useState(0)
+  const [sname,setsname]=useState("")
+  const [mark,setmark]=useState(0)
+  const dis=(e)=>{
+    if(e.target.id==="t1")
+      setrno(e.target.value)
+    if(e.target.id==="t2")
+      setsname(e.target.value)
+    if(e.target.id==="t3")
+      setmark(e.target.value)
+  }
+
+  return (
+    <div>
+      <>
+      <input type='text' id='t1' onChange={(e)=>dis(e)} value={rno}></input>
+      <input type='text' id='t2' onChange={(e)=>dis(e)} value={sname}></input>
+      <input type='text' id='t3' onChange={(e)=>dis(e)} value={mark}></input>
+      </>
+    </div>
+  )
+}
+
+export default App
+
+
+/*import React from 'react'
+import { useState } from 'react'
+
+const App = () => {
+  const [age,setAge]=useState(0)
+  // var v=200
+  const show=(ev)=>{
+    //v=v+1
+    //ev.target.value=v
+    setAge(ev.target.value)
+    console.log("---------",ev.target.value)
+  }
+  return (
+    <div>
+      <h1>use hooks to change onchanhe in xml front page without hoook we can't change we can change only in console</h1>
+      <input type="text" onChange={(e)=>show(e)} value={age}></input>
+    </div>
+  )
+}
+
+export default App
+
+
+/*import React from 'react'
+
+const App = () => {
+  return (
+    <div>
+      <>
+      <h1>Value attribute issue in textbox</h1>
+      <input type='text' value="100"></input>
+      <p>it is 24 bar 7 running app input value is given it cant be change but in normal html we can change</p>
+      <p>then we use very important hooks it is main topic to control the components in react js</p>
+      </>
+    </div>
+  )
+}
+export default App
+
+
+/*function Tamil(){
 const dis = (event)=>{
   //use to find the tage name currenlty working tag by your self
   document.getElementById("res").innerHTML=event.target.tagName+" currenlty working tag by your self"
@@ -11,7 +119,7 @@ const dis = (event)=>{
 return(
   <>
   <h1> Event .target.tagName </h1>
-  <h1> this is used to find which tag we use crrently </h1>
+  <h1> this is used to find which tag we use crrently "password:Livewirre$3210" </h1>
   <input type="text" onChange={(e)=>dis(e)}></input><br></br>
   <textarea onChange={(e)=>dis(e)}></textarea><br></br>
   <select  onChange={(e)=>dis(e)}>
